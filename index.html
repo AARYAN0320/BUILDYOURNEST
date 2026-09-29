@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Your Nest | Home Renovation, Painting, Carpentry & POP in Kharar</title>
+<meta name="description" content="Build Your Nest provides home renovation and finishing services in Kharar, Mohali, Chandigarh and Zirakpur, including painting, carpentry, tiles, POP and false ceiling, electrical, plumbing, civil work and waterproofing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0d1b2a;--green2:#152b3f;--straw:#f4b400;--bg:#f6f7f8;--ink:#111827;--mute:#5b6470;--line:#e3e7eb;--white:#fff;--red:#d92d20;
+--h:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;--b:'Instrument Sans','Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--b);color:var(--ink);background:var(--bg);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--straw);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+h1,h2,h3{font-family:var(--h);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4vw,44px);margin-bottom:14px}
+.lead{color:var(--mute);max-width:56ch;font-size:18px}
+.btn{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:600;border:2px solid transparent;cursor:pointer;font:600 16px var(--b);transition:.2s}
+.btn-p{background:var(--straw);color:var(--green)}
+.btn-p:hover{background:#f0b640}
+.btn-o{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{background:#fff;color:var(--green)}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(18,53,46,.97);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 22px var(--h);color:#fff;display:flex;align-items:center;gap:10px}
+.logo svg{width:30px;height:30px}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{color:#d5e0db;font-size:15px;font-weight:500}
+.menu a:hover{color:var(--straw)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+
+/* hero */
+.hero{background:var(--green);color:#fff;padding:96px 0 0;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(44px,7vw,84px);font-weight:800}
+.hero h1 span{color:var(--straw)}
+.hero p{color:#c3d3cd;font-size:19px;max-width:48ch;margin:22px 0 32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.promise{background:var(--green2);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:30px}
+.promise h3{font-size:22px;margin-bottom:18px;color:var(--straw)}
+.promise li{list-style:none;padding:12px 0 12px 34px;border-top:1px solid rgba(255,255,255,.1);position:relative;color:#e4ede9}
+.promise li::before{content:"✓";position:absolute;left:0;top:11px;width:22px;height:22px;border-radius:50%;background:var(--straw);color:var(--green);font-weight:700;font-size:13px;display:grid;place-items:center}
+.strip{margin-top:80px;background:var(--straw);color:var(--green);padding:18px 0}
+.strip .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 30px;font:700 17px var(--h);display:flex;grid-template-columns:none}
+
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:44px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px}
+.card .ic{width:48px;height:48px;border-radius:10px;background:var(--green);color:var(--straw);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{color:var(--mute);font-size:15.5px}
+
+/* why */
+.why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.pts{display:grid;gap:26px}
+.pt{display:grid;grid-template-columns:54px 1fr;gap:18px}
+.pt b{width:54px;height:54px;border-radius:50%;background:var(--green);color:var(--straw);display:grid;place-items:center;font:800 20px var(--h)}
+.pt h3{font-size:20px;margin-bottom:4px}
+.pt p{color:var(--mute)}
+.pen{margin-top:30px;padding:22px 26px;border-left:6px solid var(--straw);background:var(--bg);border-radius:0 10px 10px 0}
+.pen strong{font-family:var(--h);font-size:20px}
+
+/* gallery */
+.gh{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:30px 0}
+.filters button{border:1px solid var(--line);background:var(--white);padding:9px 18px;border-radius:99px;font:500 14.5px var(--b);cursor:pointer}
+.filters button.on,.filters button:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.g{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;cursor:pointer;background:var(--green2)}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.g:hover img{transform:scale(1.05)}
+.g .cap{position:absolute;inset:auto 0 0 0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(10,25,21,.85));color:#fff}
+.g .cap b{display:block;font:700 17px var(--h)}
+.g .cap span{font-size:13.5px;color:#cfdcd7}
+.g.ph{display:grid;place-items:center;color:#8fb0a6;font-size:14px;text-align:center;padding:20px;border:2px dashed #3b6a5e}
+.lb{position:fixed;inset:0;background:rgba(6,16,13,.94);z-index:100;display:none;place-items:center;padding:24px}
+.lb.open{display:grid}
+.lb img{max-height:82vh;border-radius:8px}
+.lb p{color:#fff;text-align:center;margin-top:12px}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:38px;cursor:pointer;padding:10px}
+.lb .x{top:14px;right:20px}.lb .pv{left:14px;top:50%}.lb .nx{right:14px;top:50%}
+
+/* faq */
+details{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:12px}
+summary{font:700 18px var(--h);cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";font-size:24px;color:var(--green)}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--mute)}
+
+/* contact */
+.contact{background:var(--green);color:#fff}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.contact .lead{color:#c3d3cd}
+.info{margin-top:30px;display:grid;gap:18px}
+.info div span{display:block;font-size:13.5px;color:#9db6ae}
+.info a,.info div p{font:600 18px var(--h)}
+form{background:var(--white);color:var(--ink);padding:32px;border-radius:14px;display:grid;gap:16px}
+label{font-size:14px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:16px var(--b);padding:12px 14px;border:1px solid var(--line);border-radius:8px;width:100%;background:var(--bg)}
+textarea{min-height:90px;resize:vertical}
+form .btn{background:var(--green);color:#fff}
+form .btn:hover{background:var(--green2)}
+.ok{display:none;color:#1b7a4a;font-weight:600}
+
+footer{background:#0b241f;color:#9db6ae;padding:34px 0;font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.float{position:fixed;right:18px;bottom:18px;z-index:60;display:grid;gap:10px}
+.float a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:24px;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.wa{background:#25d366}.ph2{background:var(--green)}
+
+@media(max-width:860px){
+.hero .wrap,.why-grid,.cg{grid-template-columns:1fr}
+.burger{display:block}
+.menu{position:absolute;top:68px;left:0;right:0;background:var(--green);flex-direction:column;padding:20px;gap:18px;display:none}
+.menu.open{display:flex}
+section{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.logo-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--straw),#ffd35a);color:var(--green);display:grid;place-items:center;font:800 14px var(--h);box-shadow:0 5px 14px rgba(244,180,0,.2)}
+.logo span span{color:var(--straw)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid rgba(244,180,0,.45);border-radius:999px;color:#ffe08a;background:rgba(244,180,0,.08);font-weight:700;font-size:13px;margin-bottom:18px}
+.hero h1 strong{color:#fff}
+.hero .mini-note{font-size:13px;color:#9fb0bf;margin-top:12px}
+.trustbar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;margin-top:28px}
+.trustbar div{padding:14px 12px;text-align:center;background:rgba(255,255,255,.04);font-size:13px;color:#d9e2e9}
+.trustbar b{display:block;color:#fff;font-size:15px;margin-bottom:2px}
+.service-note{margin-top:24px;padding:14px 16px;background:#fff8df;border:1px solid #f3d77b;border-radius:10px;color:#574300;font-size:14px}
+.area{display:inline-block;margin-top:18px;color:#d9e2e9;font-size:14px}
+@media(max-width:700px){.trustbar{grid-template-columns:1fr 1fr}.hero{padding-top:70px}}
+
+.map-wrap{margin-top:34px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(13,27,42,.08)}
+.map-head{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.map-head h3{font-size:22px;margin:0}
+.map-head p{color:var(--mute);font-size:14px;margin-top:3px}
+.map-frame{width:100%;height:360px;border:0;display:block}
+.map-link{white-space:nowrap}
+@media(max-width:700px){.map-frame{height:300px}}
+
+.seo-intro{padding:18px 0;background:#eef2f4}
+.seo-intro p{max-width:1000px;margin:0 auto;color:#4f5b66;font-size:14px}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"GeneralContractor",
+  "name":"Build Your Nest",
+  "description":"Complete home renovation, repair and finishing services with skilled professionals, clear agreements, payment schedules, site supervision and committed timelines.",
+  "telephone":"+917508622606",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"831, GBM Gracia Floors, Khanpur",
+    "addressLocality":"Kharar",
+    "addressRegion":"Punjab",
+    "addressCountry":"IN"
+  },
+  "areaServed":["Mohali","Chandigarh","Kharar","Zirakpur"],
+  "url":"https://wa.me/917508622606"
+}
+</script>
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Build Your Nest">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="canonical" href="https://www.buildyournest.in/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Build Your Nest | Home Renovation & Skilled Home Services">
+<meta property="og:description" content="Build Your Nest provides painting, carpentry, tiles, POP and false ceiling, electrical, plumbing, civil work and waterproofing with clear agreements, transparent payment stages, site supervision and committed timelines.">
+<meta property="og:site_name" content="Build Your Nest">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Build Your Nest | Complete Home Services">
+<meta name="twitter:description" content="One professional team for painting, carpentry, tiles, POP, electrical, plumbing, civil work and home renovation.">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"Build Your Nest",
+  "description":"Home renovation, painting, carpentry, tiles, POP and false ceiling, electrical, plumbing, civil work and waterproofing services.",
+  "telephone":"+917508622606",
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"831, GBM Gracia Floors, Khanpur",
+    "addressLocality":"Kharar",
+    "addressRegion":"Punjab",
+    "postalCode":"",
+    "addressCountry":"IN"
+  },
+  "areaServed":[
+    {"@type":"City","name":"Kharar"},
+    {"@type":"City","name":"Mohali"},
+    {"@type":"City","name":"Chandigarh"},
+    {"@type":"City","name":"Zirakpur"}
+  ],
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Build Your Nest Home Services",
+    "itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"House Painting"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Carpentry"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tile and Flooring Work"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"POP and False Ceiling"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Electrical Work"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Plumbing"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Civil Work"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Waterproofing"}}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<header>
+<div class="wrap nav">
+  <a href="#top" class="logo" aria-label="Build Your Nest home">
+    <svg viewBox="0 0 32 32" fill="none" stroke="#e3a72f" stroke-width="2.4" stroke-linecap="round"><path d="M3 15 16 4l13 11"/><path d="M6 17c0 7 4 11 10 11s10-4 10-11"/><path d="M9 21c4 2 10 2 14 0"/></svg>
+    Build Your Nest
+  </a>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  <nav class="menu" id="menu">
+    <a href="#services">Services</a><a href="#promise">Our Promise</a><a href="#projects">Projects</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    <a class="btn btn-p" href="#contact" style="padding:10px 20px">Get Free Quote</a>
+  </nav>
+</div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+ <div class="wrap">
+  <div>
+   <div class="hero-badge">HOME RENOVATION • REPAIR • FINISHING</div>
+   <h1>Stop chasing workers.<br><strong>Build your <span>nest.</span></strong></h1>
+   <p>One professional team for your home work — with a clear agreement, transparent payment schedule, proper site supervision and a committed project timeline.</p>
+   <div class="cta">
+    <a class="btn btn-p" href="#contact">Get Free Site Visit</a>
+    <a class="btn btn-o" href="https://wa.me/917508622606?text=Hi%20Build Your Nest%2C%20I%20want%20a%20free%20site%20visit%20for%20my%20home%20work." target="_blank" rel="noopener">WhatsApp Us</a>
+   </div>
+   <div class="area">Serving Mohali • Chandigarh • Kharar • Zirakpur & nearby areas</div>
+  </div>
+  <aside class="promise" id="promise">
+   <h3>What makes Build Your Nest different?</h3>
+   <ul>
+    <li>Clear written agreement before work starts</li>
+    <li>Transparent stage-wise payment schedule</li>
+    <li>Skilled professionals with proper equipment</li>
+    <li>Site supervision and one point of contact</li>
+    <li>Committed completion timeline</li>
+    <li>Delay compensation as agreed in the contract</li>
+   </ul>
+   <div class="service-note"><strong>Our promise:</strong> If a project is delayed beyond the agreed timeline for reasons covered by the contract, the applicable per-day delay compensation will be handled as stated in the agreement.</div>
+  </aside>
+ </div>
+ <div class="trustbar wrap">
+  <div><b>01</b>Clear Agreement</div>
+  <div><b>02</b>Planned Payments</div>
+  <div><b>03</b>Committed Timeline</div>
+  <div><b>04</b>Accountable Team</div>
+ </div>
+ <div class="strip"><div class="wrap"><span>Painting</span><span>Carpentry</span><span>Tiles</span><span>POP &amp; False Ceiling</span><span>Electrical</span><span>Plumbing</span><span>Civil Work</span></div></div>
+</section>
+
+<section class="seo-intro" aria-label="Build Your Nest services">
+ <div class="wrap">
+  <p><strong>Build Your Nest</strong> is a home renovation and home improvement service provider serving Kharar, Mohali, Chandigarh, Zirakpur and nearby areas. We coordinate skilled professionals for painting, carpentry, tile and flooring work, POP and false ceiling, electrical work, plumbing, civil repairs and waterproofing.</p>
+ </div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <h2>Complete home work, under one roof.</h2>
+  <p class="lead">Instead of coordinating separate workers for every trade, get one team and one point of contact for your project.</p>
+  <div class="grid3">
+   <div class="card"><div class="ic">🎨</div><h3>Painting</h3><p>Interior and exterior painting, surface preparation, putty, primer and finishing.</p></div>
+   <div class="card"><div class="ic">🪚</div><h3>Carpentry</h3><p>Doors, wardrobes, kitchens, furniture, repairs and custom woodwork.</p></div>
+   <div class="card"><div class="ic">▦</div><h3>Tiles & Flooring</h3><p>Tile installation, replacement, floor fitting, repairs and finishing.</p></div>
+   <div class="card"><div class="ic">⌂</div><h3>POP & False Ceiling</h3><p>POP work, false ceilings, modern ceiling designs and finishing.</p></div>
+   <div class="card"><div class="ic">⚡</div><h3>Electrical</h3><p>Wiring, fittings, switches, fixtures and electrical installation work.</p></div>
+   <div class="card"><div class="ic">🚿</div><h3>Plumbing</h3><p>Water lines, drainage, bathroom and kitchen fittings and repairs.</p></div>
+   <div class="card"><div class="ic">🧱</div><h3>Civil Work</h3><p>Brickwork, plastering, repairs, alterations and other home civil work.</p></div>
+   <div class="card"><div class="ic">💧</div><h3>Waterproofing</h3><p>Bathroom, terrace and wall waterproofing and seepage solutions.</p></div>
+   <div class="card"><div class="ic">🛠</div><h3>Complete Renovation</h3><p>Multiple trades managed together from site assessment to final handover.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="why">
+ <div class="wrap why-grid">
+  <div>
+   <h2>Why hire a managed team instead of random labour?</h2>
+   <p class="lead">The lowest labour quote does not always mean the lowest project cost. Delays, unfinished work and poor coordination can cost much more.</p>
+   <div class="pen"><strong>Timeline-backed agreement.</strong><br>Where a delay compensation clause is agreed in your contract, Build Your Nest follows that clause if we miss the committed completion date for a covered reason.</div>
+  </div>
+  <div class="pts">
+   <div class="pt"><b>1</b><div><h3>Written agreement</h3><p>Scope of work, pricing, payment stages, responsibilities and timeline are documented before work begins.</p></div></div>
+   <div class="pt"><b>2</b><div><h3>Skilled professionals</h3><p>We arrange the appropriate trade professionals for the work instead of leaving you to coordinate everyone yourself.</p></div></div>
+   <div class="pt"><b>3</b><div><h3>Proper equipment</h3><p>The team comes with the tools and equipment required for the agreed work.</p></div></div>
+   <div class="pt"><b>4</b><div><h3>Site supervision</h3><p>One point of contact helps keep the work aligned with the agreed scope and schedule.</p></div></div>
+   <div class="pt"><b>5</b><div><h3>Transparent payments</h3><p>Payment stages are agreed before the project starts so there is less confusion during execution.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+<div class="wrap">
+  <div class="gh">
+    <div><h2>Our recent projects</h2><p class="lead">A look at work we've completed.</p></div>
+    <a class="btn btn-p" href="#contact">Start Your Project</a>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="gal" id="gallery"></div>
+</div>
+</section>
+
+<section id="faq" style="background:var(--white)">
+<div class="wrap" style="max-width:820px">
+  <h2>Common questions</h2>
+  <details><summary>Do you give a written agreement?</summary><p>Yes. Every project starts with a written agreement covering the agreed scope, pricing, payment stages and timeline.</p></details>
+  <details><summary>What happens if the project is delayed?</summary><p>If a delay occurs beyond the committed timeline for reasons covered by the agreement, the applicable delay compensation will be handled according to the agreed contract terms.</p></details>
+  <details><summary>Can you handle multiple trades in one project?</summary><p>Yes. We coordinate multiple trades such as painting, carpentry, tiles, POP, electrical, plumbing, civil work and waterproofing under one project.</p></details>
+  <details><summary>Will someone supervise the work?</summary><p>Yes. Every site has proper supervision so the work follows the plan.</p></details>
+  <details><summary>How do I get a free site visit or quote?</summary><p>Fill in the form below or message us on WhatsApp at 75086 22606.</p></details>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap cg">
+  <div>
+    <h2>Book your free site visit</h2>
+    <p class="lead">Tell us what work you need. We'll understand the project, arrange a site visit and share the next steps.</p>
+    <div class="info">
+      <div><span>Phone &amp; WhatsApp</span><a href="tel:+917508622606">+91 75086 22606</a></div>
+      <div><span>Address</span><p>831, GBM Gracia Floors, Khanpur, Kharar</p></div>
+    </div>
+  </div>
+  <form id="qf">
+    <label>Your name<input name="name" required></label>
+    <label>Phone number<input name="phone" type="tel" required></label>
+    <label>Service needed
+      <select name="service" required>
+        <option value="">Select a service</option>
+        <option>Civil Work</option><option>Carpentry</option><option>POP / False Ceiling</option>
+        <option>Paint Work</option><option>Electrical Work</option><option>Plumbing Work</option>
+        <option>Waterproofing</option><option>Multiple / Full Project</option>
+      </select>
+    </label>
+    <label>Location<input name="loc"></label>
+    <label>Details<textarea name="msg" placeholder="Size, budget, timeline, anything else"></textarea></label>
+    <button class="btn" type="submit">Send via WhatsApp</button>
+    <div class="ok" id="ok">Opening WhatsApp with your details…</div>
+  </form>
+</div>
+</section>
+  </form>
+ </div>
+
+ <div class="map-wrap">
+  <div class="map-head">
+   <div>
+    <h3>Find Build Your Nest</h3>
+    <p>831, GBM Gracia Floors, Khanpur, Kharar, Punjab</p>
+   </div>
+   <a class="btn btn-p map-link"
+      href="https://www.google.com/maps/search/?api=1&query=831%2C%20GBM%20Gracia%20Floors%2C%20Khanpur%2C%20Kharar%2C%20Punjab"
+      target="_blank" rel="noopener">Open in Google Maps</a>
+  </div>
+  <iframe
+    class="map-frame"
+    src="https://www.google.com/maps?q=831%2C%20GBM%20Gracia%20Floors%2C%20Khanpur%2C%20Kharar%2C%20Punjab&output=embed"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Build Your Nest location map"></iframe>
+ </div>
+ </section>
+ </main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Build Your Nest. All rights reserved.</span><span>Your Home. Our Team.</span></div></footer>
+
+<div class="float">
+  <a class="wa" href="https://wa.me/917508622606" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <a class="ph2" href="tel:+917508622606" aria-label="Call">📞</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="x" aria-label="Close">×</button>
+  <button class="pv" aria-label="Previous">‹</button>
+  <div><img id="lbimg" alt=""><p id="lbcap"></p></div>
+  <button class="nx" aria-label="Next">›</button>
+</div>
+
+<script>
+/* ============================================================
+   ADD YOUR PROJECTS HERE
+   1. Keep all project photos in the "images" folder next to this file.
+   2. The project gallery below already uses the supplied Build Your Nest project photos.
+   category: any word you like (Civil, Paint, Ceiling, Plumbing...)
+   ============================================================ */
+const PROJECTS = [
+  { img: "images/project-civil-house-construction-01.jpeg", title: "House Construction & Civil Work", place: "Build Your Nest Project", category: "Civil Work" },
+  { img: "images/project-foundation-brickwork-02.jpeg", title: "Foundation & Brickwork", place: "Build Your Nest Project", category: "Civil Work" },
+  { img: "images/project-brickwork-construction-03.jpeg", title: "Residential Brickwork Construction", place: "Build Your Nest Project", category: "Civil Work" },
+  { img: "images/project-modular-kitchen-04.jpeg", title: "Modular Kitchen Installation", place: "Build Your Nest Project", category: "Carpentry" },
+  { img: "images/project-modular-kitchen-finish-05.jpeg", title: "Modular Kitchen & Interior Finishing", place: "Build Your Nest Project", category: "Carpentry" },
+  { img: "images/project-interior-finishing-06.jpeg", title: "Interior Finishing & Wall Work", place: "Build Your Nest Project", category: "Interior Finishing" },
+  { img: "images/project-completed-house-exterior-07.jpeg", title: "Completed Residential House", place: "Build Your Nest Project", category: "Exterior Finishing" },
+  { img: "images/project-pop-false-ceiling-08.jpeg", title: "POP & False Ceiling Work", place: "Build Your Nest Project", category: "POP & Ceiling" },
+  { img: "images/project-modern-house-elevation-09.jpeg", title: "Modern House Exterior & Elevation", place: "Build Your Nest Project", category: "Exterior Finishing" },
+  { img: "images/project-civil-construction-10.jpeg", title: "Civil Construction & Column Work", place: "Build Your Nest Project", category: "Civil Work" },
+  { img: "images/project-brickwork-structural-11.jpeg", title: "Brickwork & Structural Construction", place: "Build Your Nest Project", category: "Civil Work" },
+  { img: "images/project-foundation-brickwork-12.jpeg", title: "Foundation & Residential Construction", place: "Build Your Nest Project", category: "Civil Work" }
+];
+
+const gal = document.getElementById('gallery'), fl = document.getElementById('filters');
+let shown = [], cur = 0;
+
+function render(cat){
+  shown = PROJECTS.filter(p => cat === 'All' || p.category === cat);
+  gal.innerHTML = '';
+  shown.forEach((p, i) => {
+    const d = document.createElement('div');
+    d.className = 'g'; d.tabIndex = 0;
+    const im = new Image();
+    im.alt = p.title + ' by Build Your Nest'; im.loading = 'lazy'; im.decoding = 'async'; im.width = 1200; im.height = 900; im.src = p.img;
+    im.onerror = () => { d.className = 'g ph'; d.innerHTML = 'Add photo:<br>' + p.img; d.onclick = null; };
+    d.appendChild(im);
+    const c = document.createElement('div');
+    c.className = 'cap'; c.innerHTML = '<b></b><span></span>';
+    c.querySelector('b').textContent = p.title;
+    c.querySelector('span').textContent = p.category + ' · ' + p.place;
+    d.appendChild(c);
+    d.onclick = () => open(i);
+    d.onkeydown = e => { if (e.key === 'Enter') open(i); };
+    gal.appendChild(d);
+  });
+}
+const cats = ['All', ...new Set(PROJECTS.map(p => p.category))];
+cats.forEach((c, i) => {
+  const b = document.createElement('button');
+  b.textContent = c; if (!i) b.className = 'on';
+  b.onclick = () => { fl.querySelectorAll('button').forEach(x => x.className = ''); b.className = 'on'; render(c); };
+  fl.appendChild(b);
+});
+render('All');
+
+const lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg'), lbcap = document.getElementById('lbcap');
+function open(i){ cur = i; show(); lb.classList.add('open'); }
+function show(){ const p = shown[cur]; lbimg.src = p.img; lbimg.alt = p.title; lbcap.textContent = p.title + ' – ' + p.place; }
+function step(n){ cur = (cur + n + shown.length) % shown.length; show(); }
+lb.querySelector('.x').onclick = () => lb.classList.remove('open');
+lb.querySelector('.pv').onclick = () => step(-1);
+lb.querySelector('.nx').onclick = () => step(1);
+lb.onclick = e => { if (e.target === lb) lb.classList.remove('open'); };
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') lb.classList.remove('open');
+  if (e.key === 'ArrowLeft') step(-1);
+  if (e.key === 'ArrowRight') step(1);
+});
+
+document.getElementById('qf').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const t = `Hello Build Your Nest,%0AName: ${encodeURIComponent(f.get('name'))}%0APhone: ${encodeURIComponent(f.get('phone'))}%0AService: ${encodeURIComponent(f.get('service'))}%0ALocation: ${encodeURIComponent(f.get('loc'))}%0ADetails: ${encodeURIComponent(f.get('msg'))}`;
+  document.getElementById('ok').style.display = 'block';
+  window.open('https://wa.me/917508622606?text=' + t, '_blank');
+});
+document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
